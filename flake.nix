@@ -18,10 +18,6 @@
       {
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
-            gnumake
-            pkg-config
-            gcc
-
             gtkmm4
             gtk4-layer-shell
             wireplumber
