@@ -15,9 +15,10 @@ jobs:
       contents: write # for publishing release
     strategy:
       matrix:
-        - os: ubuntu-24.04
-        - os: ubuntu-24.04-arm
-    runs-on: ${{ matrix.os }}
+        build:
+          - os: ubuntu-24.04
+          - os: ubuntu-24.04-arm
+    runs-on: ${{ matrix.build.os }}
     steps:
       - uses: actions/checkout@v6
         with:
