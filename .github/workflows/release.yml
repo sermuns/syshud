@@ -18,10 +18,18 @@ jobs:
         build:
           - os: ubuntu-24.04
           - os: ubuntu-24.04-arm
+
     runs-on: ${{ matrix.build.os }}
     steps:
       - uses: actions/checkout@v6
         with:
           persist-credentials: false
+
+      - run: |
+          apt-get install -y \
+            libgtkmm-4.0-dev \
+            libgtk4-layer-shell-dev \
+            libwireplumber-0.5-dev \
+            libevdev-dev
 
       - run: make -j syshud
