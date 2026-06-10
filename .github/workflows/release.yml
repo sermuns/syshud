@@ -24,4 +24,4 @@ jobs:
         with:
           persist-credentials: false
 
-      - run: make -j
+      - run: make -j syshud
