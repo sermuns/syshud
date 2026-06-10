@@ -18,6 +18,8 @@
       {
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
+            pkg-config
+
             gtkmm4
             gtk4-layer-shell
             wireplumber
