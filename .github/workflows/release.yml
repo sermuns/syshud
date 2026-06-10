@@ -25,6 +25,8 @@ jobs:
         with:
           persist-credentials: false
 
+      - uses: cachix/install-nix-action@v31
+
       - name: Restore and save Nix store
         uses: nix-community/cache-nix-action@v7
         with:
@@ -47,7 +49,5 @@ jobs:
           purge-last-accessed: P1DT12H
           # except any version with the key that is the same as the `primary-key`
           purge-primary-key: never
-
-      - uses: cachix/install-nix-action@v31
 
       - run: nix develop --command make -j syshud
