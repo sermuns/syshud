@@ -30,6 +30,7 @@ jobs:
       - uses: docker/build-push-action@v7
         with:
           tags: syshud:latest
+          load: true
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
