@@ -1,4 +1,4 @@
-FROM debian
+FROM debian:13-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 
