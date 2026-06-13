@@ -34,4 +34,4 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - run: docker run --rm -u $(id -u):$(id -g) -v .:/workspace syshud make -j
+      - run: docker run --rm -u $(id -u):$(id -g) -v .:/workspace syshud make -j syshud
