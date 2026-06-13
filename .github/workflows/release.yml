@@ -27,4 +27,4 @@ jobs:
 
       - run: docker build . -t syshud
 
-      - run: docker run --rm -it -u $(id -u):$(id -g) -v .:/workspace syshud make -j
+      - run: docker run --rm -u $(id -u):$(id -g) -v .:/workspace syshud make -j
